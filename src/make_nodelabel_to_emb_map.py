@@ -12,8 +12,11 @@ def load_node2vec_emb_as_dict (emb_fname):
     return nodeid_to_vec_map
 
 
-nodelabel_to_id_map_fname = 'drebin_combined_ADGnodelabel_to_id_map.json'
-emb_fname = 'drebin_combined_ADG.embeds'
+# nodelabel_to_id_map_fname = 'drebin_combined_ADGnodelabel_to_id_map.json'
+# emb_fname = 'drebin_combined_ADG.embeds'
+
+nodelabel_to_id_map_fname = sys.argv[1]
+emb_fname = sys.argv[2]
 op_fname = emb_fname.replace('.embeds','.json')
 
 with open (nodelabel_to_id_map_fname) as fh:
